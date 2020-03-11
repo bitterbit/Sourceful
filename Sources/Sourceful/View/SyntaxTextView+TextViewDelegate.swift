@@ -235,7 +235,11 @@ extension SyntaxTextView {
 
 	func shouldChangeText(insertingText: String) -> Bool {
 
-		let selectedRange = textView.selectedRange
+        if !isEdiable {
+            return false
+        }
+        
+        let selectedRange = textView.selectedRange
 
 		let origInsertingText = insertingText
 

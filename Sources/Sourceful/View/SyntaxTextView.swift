@@ -66,6 +66,7 @@ open class SyntaxTextView: View {
     }
 
     var ignoreSelectionChange = false
+    var isEdiable = true
 
     #if os(macOS)
 
